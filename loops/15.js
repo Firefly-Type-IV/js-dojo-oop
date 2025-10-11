@@ -13,4 +13,9 @@ export function reverseArray(arr) {
   // TODO: Use a for loop to iterate over the elements of the array from the end to the beginning.
   // TODO: Add each element to the new array.
   // TODO: Return the new array.
+  let reverseArray = [];
+  for(let i = arr.length - 1; i >= 0; i--){
+    reverseArray.push(arr[i]);
+  }
+  return reverseArray;
 }

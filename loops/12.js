@@ -14,4 +14,13 @@ export function findMax(arr) {
   // TODO: For each element, check if it is greater than the current maximum value.
   // TODO: If it is, update the maximum value.
   // TODO: Return the maximum value.
+  if (arr.length === 0){
+    return - 1;
+  }
+  
+  let max = 0;
+  for(let i = 0; i <= arr.length - 1; i++){
+    max = arr[i] > max ? max = arr[i] : max;
+  }
+  return max;
 }

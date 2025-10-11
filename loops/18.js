@@ -15,4 +15,13 @@ export function filterExpensiveProducts(prices, maxPrice) {
   // TODO: For each price, check if it is less than or equal to the maxPrice.
   // TODO: If it is, add it to the new array.
   // TODO: Return the new array.
+  let filteredPrice = [];
+  for(let price of prices){
+    if(price <= maxPrice){
+      filteredPrice.push(price)
+    }
+  }
+  return filteredPrice;
+//  return prices.filter(price => price <= maxPrice);
+  
 }

@@ -13,4 +13,9 @@ export function productSmallerNumbers(input) {
   // TODO: Use a for loop to iterate from 1 to one less than the input number.
   // TODO: Multiply each number to the product variable.
   // TODO: Return the product.
+  let product = 1;
+  for(let i = 1; i < input; i++){
+    product *= i;
+  }
+  return product;
 }

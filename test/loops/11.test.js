@@ -13,4 +13,7 @@ describe('sumArray', function () {
   it('should return 6 for input [1, 2, 3]', function () {
     assert.strictEqual(sumArray([1, 2, 3]), 6)
   })
+  it('should return 23 for input [1, 2, 3, 4, 5, 6, 7]', () => {
+    assert.strictEqual(sumArray([1, 2, 3, 4, 5, 6, 7]), 28)
+  })
 })

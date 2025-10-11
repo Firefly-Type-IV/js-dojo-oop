@@ -14,4 +14,5 @@ export function findIndex(arr, element) {
   // TODO: For each element, check if it is equal to the specified element.
   // TODO: If it is, return the current index.
   // TODO: If the loop completes without finding the element, return -1.
+  return arr.indexOf(element);
 }

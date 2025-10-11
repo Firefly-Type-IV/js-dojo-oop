@@ -14,4 +14,13 @@ export function calculateInventoryValue(quantities, prices) {
   // TODO: Use a for loop to iterate over the quantities array.
   // TODO: Multiply each quantity by the corresponding price and add it to the total value.
   // TODO: Return the total inventory value.
+  const total = quantities.reduce((accumulator, quantity, i) => {
+    return accumulator + (quantity * prices[i]);
+  }, 0);
+
+  // let total = 0;
+  // for(let i = 0; i <= quantities.length - 1; i++){
+  //   total += quantities[i] * prices[i];
+  // }
+  return total;
 }

@@ -14,4 +14,10 @@ export function sumOddNumbers(input) {
   // TODO: Check if the current number is odd.
   // TODO: If it is, add it to the sum variable.
   // TODO: Return the sum.
+  let sum = 0;
+  for(let i = 1; i < input; i++){
+    const odd = i % 2 === 0 ? 0 : i;
+    sum += odd;
+  }
+  return sum;
 }

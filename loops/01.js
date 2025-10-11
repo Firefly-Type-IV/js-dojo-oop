@@ -13,4 +13,9 @@ export function sumSmallerNumbers(input) {
   // TODO: Use a for loop to iterate from 1 to one less than the input number.
   // TODO: Add each number to the sum variable.
   // TODO: Return the sum.
+  let sum = 0;
+  for(let i = 1; i < input; i++){
+    sum += i;
+  }
+  return sum;
 }

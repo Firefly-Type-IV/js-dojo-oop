@@ -14,4 +14,12 @@ export function flattenNestedArray(arr) {
   // TODO: Use another for loop to iterate over each inner array.
   // TODO: Add each element to the new array.
   // TODO: Return the new array.
+  let flat = [];
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[i].length; j++){
+      flat.push(arr[i][j]);
+    }
+  }
+  return flat;
+  // return arr.flat()
 }

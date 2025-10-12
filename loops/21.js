@@ -14,4 +14,15 @@ export function calculateEngagement(posts) {
   // TODO: For each post, calculate the total engagement by summing likes, comments, and shares.
   // TODO: Add the total engagement to the new array.
   // TODO: Return the new array.
+  // let engagement = [];
+  // for(let i = 0; i < posts.length; i++){
+  //   const [likes, comments, shares] = posts[i];
+  //   const totalEngagment = likes + comments + shares;
+  //   engagement.push(totalEngagment);
+  // }
+  // return engagement;
+  return posts.map(post => {
+    const [likes, comments, shares] = post;
+    return likes + comments + shares;
+  })
 }

@@ -12,4 +12,12 @@
 export function createRectangle(width, height) {
   // TODO: Create an object with width and height properties.
   // TODO: Add a getArea method that returns width * height.
+  const rectangle = {
+    width: width,
+    height: height,
+    getArea: function(){
+      return width * height;
+    }
+  }
+  return rectangle;
 }

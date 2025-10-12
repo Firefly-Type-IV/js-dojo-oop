@@ -12,4 +12,14 @@ export function createCounter() {
   // TODO: Create an object with a value property starting at 0.
   // TODO: Add an increment method that increases the value by 1.
   // TODO: Add a getValue method that returns the current value.
+  const counter = {
+    value: 0,
+    increment(){
+      return counter.value += 1;
+    },
+    getValue(){
+      return counter.value;
+    }
+  }
+  return counter;
 }

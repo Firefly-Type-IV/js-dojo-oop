@@ -27,4 +27,15 @@ describe('findMaxNestedArray', function () {
       15
     )
   })
+
+  it('should return 6 for input [[1, 2], [6, 4, 5], [4, 3]]', () => {
+    assert.strictEqual(
+      findMaxNestedArray([
+        [1, 2],
+        [6, 4, 5],
+        [4, 3]
+      ]),
+      6
+    )
+  })
 })

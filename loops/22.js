@@ -15,4 +15,15 @@ export function findMaxNestedArray(arr) {
   // TODO: For each element, check if it is greater than the current maximum value.
   // TODO: If it is, update the maximum value.
   // TODO: Return the maximum value.
+  let max = arr[0][0]
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[i].length; j++){ // must start inner loop at 0 not 1, otherwise first element of every sub array is skipped.
+      // max = arr[i][j] > max ? max = arr[i][j] : max;
+      const currentValue = arr[i][j];
+      if(currentValue > max){
+        max = currentValue; // assign value in current as max
+      }
+    }
+  }
+  return max;
 }

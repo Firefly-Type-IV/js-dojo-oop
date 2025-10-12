@@ -11,4 +11,11 @@
 export function createGreeter(name) {
   // TODO: Create an object with a name property and a greet method.
   // TODO: The greet method should return "Hello, my name is [name]"
+  const person = {
+    name: name,
+    greet: function() {
+      return `Hello, my name is ${this.name}`
+    }
+  }
+  return person;
 }

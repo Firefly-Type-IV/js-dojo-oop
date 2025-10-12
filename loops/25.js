@@ -15,4 +15,17 @@ export function rowSums(arr) {
   // TODO: Use another for loop to iterate over each element in the inner array and add it to the row sum.
   // TODO: Add the row sum to the new array.
   // TODO: Return the new array.
+  // let sum = [];
+  // for(let i = 0; i < arr.length; i++){
+  //   let rowSum = 0 // to add rows sum at first loop, initialise variable after the outer loop to ensure it is reset for each row.
+  //   // This ensures the current sum is set back to zero before processing every new row, if outside it would accumulate the sum of all elements.
+  //   for(let j = 0; j < arr[i].length; j++){
+  //     rowSum += arr[i][j];
+  //   }
+  //   sum.push(rowSum)
+  // }
+  // return sum;
+  return arr.map(row => {
+    return row.reduce((acc, currentValue) => acc + currentValue, 0);
+  })
 }

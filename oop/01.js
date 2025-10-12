@@ -11,4 +11,6 @@
  */
 export function createPerson(name, age) {
   // TODO: Create and return an object with name and age properties.
+  const object = {name, age}
+  return object
 }

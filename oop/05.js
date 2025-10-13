@@ -7,6 +7,7 @@ export class Circle {
    */
   constructor(radius) {
     // TODO: Store the radius as a property.
+    this.radius = radius;
   }
 
   /**
@@ -15,5 +16,6 @@ export class Circle {
    */
   getArea() {
     // TODO: Return the area using Math.PI.
+    return Math.PI * this.radius ** 2;
   }
 }

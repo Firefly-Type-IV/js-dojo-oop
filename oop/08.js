@@ -9,6 +9,9 @@ export class Book {
    */
   constructor(title, author, pages) {
     // TODO: Store title, author, and pages as properties.
+    this.title = title;
+    this.author = author;
+    this.page = pages;
   }
 
   /**
@@ -21,5 +24,6 @@ export class Book {
    */
   getSummary() {
     // TODO: Return a string in the format "[title] by [author], [pages] pages"
+    return `${this.title} by ${this.author}, ${this.page} pages`
   }
 }

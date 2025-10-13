@@ -8,6 +8,8 @@ export class Car {
    */
   constructor(make, model) {
     // TODO: Store make and model as properties.
+    this.make = make;
+    this.model = model;
   }
 
   /**
@@ -20,5 +22,6 @@ export class Car {
    */
   getFullName() {
     // TODO: Return a string with make and model separated by a space.
+    return `${this.make} ${this.model}`;
   }
 }

@@ -8,6 +8,8 @@ export class Student {
   constructor(name) {
     // TODO: Store name as a property.
     // TODO: Initialize an empty array for grades.
+    this.name = name;
+    this.grades = [];
   }
 
   /**
@@ -16,6 +18,7 @@ export class Student {
    */
   addGrade(grade) {
     // TODO: Add the grade to the grades array.
+    this.grades.push(grade);
   }
 
   /**
@@ -25,5 +28,14 @@ export class Student {
   getAverage() {
     // TODO: Calculate and return the average of the grades array.
     // TODO: Return 0 if there are no grades.
+    if(this.grades.length <= 0){
+      return 0;
+    }
+    let sum = 0
+    for(let i = 0; i < this.grades.length; i++){
+      sum += this.grades[i] 
+    }
+    let avg = sum / this.grades.length;
+    return avg;
   }
 }

@@ -4,14 +4,16 @@
 export class ShoppingCart {
   constructor() {
     // TODO: Initialize an empty array for items.
+    this.arr = []
   }
 
   /**
    * Adds an item to the cart.
    * @param {Object} item - An item with name and price properties.
    */
-  addItem(item) {
-    // TODO: Add the item to the items array.
+  addItem(item){
+    // TODO: Add the item to the items array
+    this.arr.push(item)
   }
 
   /**
@@ -26,5 +28,10 @@ export class ShoppingCart {
    */
   getTotal() {
     // TODO: Sum up the price of all items and return the total.
+    let sum = 0
+    for(let i = 0; i < this.arr.length; i++){
+      sum += this.arr[i].price 
+    }
+    return sum
   }
 }

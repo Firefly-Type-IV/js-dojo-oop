@@ -8,6 +8,8 @@ export class Employee {
    */
   constructor(name, salary) {
     // TODO: Store name and salary as properties.
+    this.name = name;
+    this.salary = salary;
   }
 
   /**
@@ -16,6 +18,8 @@ export class Employee {
    */
   getAnnualSalary() {
     // TODO: Return the salary.
+    const sal = this.salary;
+    return sal;
   }
 }
 
@@ -31,6 +35,11 @@ export class Manager extends Employee {
   constructor(name, salary, bonus) {
     // TODO: Call super with name and salary.
     // TODO: Store bonus as a property.
+    // Manager is a sub class/ child class of of Employee, so you must call super() before this in the constructor
+    super(name, salary, bonus);
+    // this.nam = name;
+    // this.sal = salary;
+    this.bon = bonus;
   }
 
   /**
@@ -39,5 +48,8 @@ export class Manager extends Employee {
    */
   getAnnualSalary() {
     // TODO: Return salary + bonus (use super.getAnnualSalary() + this.bonus).
+    // return this.sal + this.bon
+    return super.getAnnualSalary() + this.bon;
+    // access parent methods, without parentheses acts as a reference to the prototype of the parent class
   }
 }

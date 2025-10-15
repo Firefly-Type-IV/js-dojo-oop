@@ -7,6 +7,7 @@ export class Animal {
    */
   constructor(name) {
     // TODO: Store name as a property.
+    this.name = name;
   }
 
   /**
@@ -15,6 +16,7 @@ export class Animal {
    */
   speak() {
     // TODO: Return "[name] makes a sound"
+    return `${this.name} makes a sound`
   }
 }
 
@@ -22,6 +24,11 @@ export class Animal {
  * A Dog class that extends Animal.
  */
 export class Dog extends Animal {
+
+  constructor(name){
+    super(name)
+    // call the Animal class constructor
+  }
   /**
    * Makes the dog bark.
    * @returns {string} - A dog-specific sound.
@@ -32,5 +39,6 @@ export class Dog extends Animal {
    */
   speak() {
     // TODO: Return "[name] barks" (use this.name from the parent class)
+    return `${this.name} barks`
   }
 }

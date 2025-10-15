@@ -14,6 +14,10 @@ export class MathUtils {
    */
   static max(a, b) {
     // TODO: Return the larger of the two numbers.
+    if(b > a){
+      return b
+    }
+    return a
   }
 
   /**
@@ -22,7 +26,12 @@ export class MathUtils {
    * @param {number} b - Second number.
    * @returns {number} - The minimum value.
    */
+  // no instances are created, so this or constructors are unneccesary
   static min(a, b) {
     // TODO: Return the smaller of the two numbers.
+    if(b < a){
+      return b
+    }
+    return a
   }
 }

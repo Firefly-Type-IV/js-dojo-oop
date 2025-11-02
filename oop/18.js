@@ -7,6 +7,8 @@ export class Counter {
   constructor() {
     // TODO: Increment the static totalCounters property.
     // TODO: Initialize an instance count property starting at 0.
+    Counter.totalCounters ++
+    this.counter = 0
   }
 
   /**
@@ -14,6 +16,7 @@ export class Counter {
    */
   increment() {
     // TODO: Increment the instance count property.
+    this.counter ++
   }
 
   /**
@@ -22,6 +25,7 @@ export class Counter {
    */
   getValue() {
     // TODO: Return the instance count.
+    return this.counter
   }
 
   /**
@@ -30,5 +34,6 @@ export class Counter {
    */
   static getTotalCounters() {
     // TODO: Return the static totalCounters property.
+    return Counter.totalCounters 
   }
 }

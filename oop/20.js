@@ -8,6 +8,8 @@ export class Playlist {
   constructor(name) {
     // TODO: Store name as a property.
     // TODO: Initialize an empty array for songs.
+    this.name = name;
+    this.songs = [];
   }
 
   /**
@@ -16,6 +18,7 @@ export class Playlist {
    */
   addSong(song) {
     // TODO: Add the song to the songs array.
+    this.songs.push(song);
   }
 
   /**
@@ -24,6 +27,13 @@ export class Playlist {
    */
   removeSong(song) {
     // TODO: Remove the song from the array using filter or splice.
+    return this.songs = this.songs.filter((word) => word !== song);
+    // only shallow copy doesn't remove from original array
+    const index = this.songs.indexOf(song)
+    if(index > -1){
+      this.songs.splice(index, 1)
+    }
+    return this.songs
   }
 
   /**
@@ -32,6 +42,7 @@ export class Playlist {
    */
   getSongs() {
     // TODO: Return the songs array.
+    return this.songs;
   }
 
   /**
@@ -41,5 +52,6 @@ export class Playlist {
    */
   hasSong(song) {
     // TODO: Check if the song is in the array.
+    return this.songs.includes(song);
   }
 }

@@ -8,6 +8,8 @@ export class Vector2D {
    */
   constructor(x, y) {
     // TODO: Store x and y as properties.
+    this.x = x;
+    this.y = y;
   }
 
   /**
@@ -22,6 +24,9 @@ export class Vector2D {
    */
   add(other) {
     // TODO: Return a new Vector2D with x and y components added.
+    let X = other.x + this.x;
+    let Y = other.y + this.y;
+    return new Vector2D(X, Y)
   }
 
   /**
@@ -30,5 +35,6 @@ export class Vector2D {
    */
   magnitude() {
     // TODO: Return sqrt(x² + y²) using Math.sqrt and Math.pow.
+    return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
   }
 }

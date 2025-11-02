@@ -5,6 +5,7 @@ export class TodoList {
   constructor() {
     // TODO: Initialize an empty array for todos.
     // TODO: Each todo should be an object with { task: string, completed: boolean }
+    this.todos = []
   }
 
   /**
@@ -13,6 +14,7 @@ export class TodoList {
    */
   addTodo(task) {
     // TODO: Add a new todo object with completed set to false.
+    this.todos.push({task: task, completed: false})
   }
 
   /**
@@ -21,6 +23,7 @@ export class TodoList {
    */
   completeTodo(index) {
     // TODO: Set the completed property to true for the todo at the given index.
+    this.todos[index].completed = true
   }
 
   /**
@@ -29,6 +32,7 @@ export class TodoList {
    */
   getIncompleteTodos() {
     // TODO: Filter and return todos where completed is false.
+    return this.todos.filter(todo => todo.completed === false)
   }
 
   /**
@@ -37,5 +41,6 @@ export class TodoList {
    */
   getCompletedTodos() {
     // TODO: Filter and return todos where completed is true.
+    return this.todos.filter(todo => todo.completed === true)
   }
 }
